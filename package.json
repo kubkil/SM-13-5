@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/kubkil/SM-13-5/issues"
   },
-  "homepage": "https://github.com/kubkil/SM-13-5#readme"
+  "homepage": "https://github.com/kubkil/SM-13-5#readme",
+  "dependencies": {
+    "colors": "^1.2.1"
+  }
 }
