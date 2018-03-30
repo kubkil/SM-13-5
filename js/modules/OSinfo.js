@@ -19,7 +19,7 @@ function getOSinfo() {
   console.log(colors.cyan('CPU model:'), cpu);
   console.log(colors.green('User name:'), userInfo.username);
   console.log(colors.yellow('Home dir:'), userInfo.homedir);
-  // w jaki sposób os.uptime trafia do funkcji time?
+  // w jaki sposób os.uptime trafia jako argument do funkcji time?
   formatTime.print(os.uptime());
 }
 
