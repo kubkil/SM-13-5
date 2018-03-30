@@ -1,4 +1,5 @@
 const os = require('os');
+const colors = require('colors');
 const formatTime = require('./formatTime');
 
 function getOSinfo() {
@@ -13,12 +14,13 @@ function getOSinfo() {
   const cpu = os.cpus()[0].model;
   const userInfo = os.userInfo();
 
-  console.log('System:', type);
-  console.log('Release', release);
-  console.log('CPU model:', cpu);
-  console.log('User name:', userInfo.username);
-  console.log('Home dir:', userInfo.homedir);
-  formatTime.print();
+  console.log(colors.grey('System:'), type);
+  console.log(colors.red('Release:'), release);
+  console.log(colors.cyan('CPU model:'), cpu);
+  console.log(colors.green('User name:'), userInfo.username);
+  console.log(colors.yellow('Home dir:'), userInfo.homedir);
+  // w jaki sposób os.uptime trafia do funkcji time?
+  formatTime.print(os.uptime());
 }
 
 exports.print = getOSinfo;
